@@ -1,4 +1,4 @@
-package com.jgh.test.alone;
+package com.jgh.test.alone.intputOutput;
 
 import java.util.Scanner;
 

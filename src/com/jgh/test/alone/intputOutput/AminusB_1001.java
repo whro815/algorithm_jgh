@@ -1,11 +1,11 @@
-package com.jgh.test.alone;
+package com.jgh.test.alone.intputOutput;
 
 import java.util.Scanner;
 
-public class AplusB_1000 {
+public class AminusB_1001 {
 
-    public static int getPlus(int a, int b){
-        return a+b;
+    public static int getMinus(int a, int b){
+        return a-b;
     }
 
     public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class AplusB_1000 {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        System.out.println(getPlus(a, b));
+        System.out.println(getMinus(a, b));
     }
 
 }

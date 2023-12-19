@@ -1,11 +1,11 @@
-package com.jgh.test.alone;
+package com.jgh.test.alone.intputOutput;
 
 import java.util.Scanner;
 
-public class AminusB_1001 {
+public class AmultiplicationB_10998 {
 
-    public static int getMinus(int a, int b){
-        return a-b;
+    public static int getMulti(int a, int b){
+        return a * b;
     }
 
     public static void main(String[] args) {
@@ -13,7 +13,6 @@ public class AminusB_1001 {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        System.out.println(getMinus(a, b));
+        System.out.println(getMulti(a, b));
     }
-
 }
