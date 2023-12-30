@@ -8,8 +8,11 @@ public class Star2_2439 {
 
         int a = sc.nextInt();
 
-        for (int i = 0; i < a; i++) {       // 0 ~ 5
-            for (int j = a; j < a - i; j--) {   //  j = 4 3 2 1 0    >  a-1 = 4 3 2 1
+        for (int i = 1; i <= a; i++) {
+            for (int j = 1; j <= a-i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= i; k++) {
                 System.out.print("*");
             }
             System.out.print("\n");
