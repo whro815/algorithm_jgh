@@ -7,13 +7,17 @@ import java.util.Scanner;
 
 public class SortingNum_2750 {
     public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
+//        Scanner sc = new Scanner(System.in);
 //
-        int total = sc.nextInt();
-          int []arr = new int[total];
+//        int total = sc.nextInt();
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int total = Integer.parseInt(br.readLine());
+        int[] arr = new int[total];
 
         for (int i = 0; i < total; i++) {
-            arr[i] = sc.nextInt();
+            arr[i] = Integer.parseInt(br.readLine());
         }
 
         for (int i = 0; i < total-1; i++) {
