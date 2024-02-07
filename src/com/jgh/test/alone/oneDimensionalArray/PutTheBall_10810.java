@@ -1,20 +1,26 @@
 package com.jgh.test.alone.oneDimensionalArray;
 
+import java.io.*;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class PutTheBall_10810 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+//        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int N = sc.nextInt();
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        int N = Integer.parseInt(st.nextToken());
         int []arr = new int[N];
-        int M = sc.nextInt();   // 공을 넣는 횟수
+        int M = Integer.parseInt(st.nextToken());
 
         for (int i = 0; i < M; i++) {
 
-            int I = sc.nextInt();
-            int J = sc.nextInt();
-            int K = sc.nextInt();
+            int I = Integer.parseInt(st.nextToken());
+            int J = Integer.parseInt(st.nextToken());
+            int K = Integer.parseInt(st.nextToken());
 
             for (int j = I - 1; j < J; j++) {
                 arr[j] = K;
@@ -22,7 +28,11 @@ public class PutTheBall_10810 {
         }
 
         for (int k = 0; k < arr.length; k++) {
-            System.out.print(arr[k] + " ");
+            bw.write(arr[k] + " ");
         }
+
+        br.close();
+        bw.flush(); // stream 을 닫지 않은 상태에서 byte를 보내고 싶은 경우, 즉 스트림을 닫아서는 안되는 경우 flush
+        bw.close();
     }
 }
