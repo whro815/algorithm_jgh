@@ -17,6 +17,8 @@ public class PutTheBall_10810 {
 
         for (int i = 0; i < M; i++) {
 
+            st = new StringTokenizer(br.readLine());
+
             int I = Integer.parseInt(st.nextToken());
             int J = Integer.parseInt(st.nextToken());
             int K = Integer.parseInt(st.nextToken());
