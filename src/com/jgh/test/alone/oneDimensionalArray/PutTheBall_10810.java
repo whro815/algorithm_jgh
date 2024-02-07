@@ -1,7 +1,6 @@
 package com.jgh.test.alone.oneDimensionalArray;
 
 import java.io.*;
-import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class PutTheBall_10810 {
