@@ -1,16 +1,19 @@
 package com.jgh.test.alone.stringEx;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class final_2908 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
 
-        int fst = sc.nextInt();
-        int sec = sc.nextInt();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        fst = Integer.parseInt(new StringBuilder().append(fst).reverse().toString());
-        sec = Integer.parseInt(new StringBuilder().append(sec).reverse().toString());
+        StringTokenizer st = new StringTokenizer(br.readLine()," ");
+
+        int fst = Integer.parseInt(new StringBuilder(st.nextToken()).reverse().toString());
+        int sec = Integer.parseInt(new StringBuilder(st.nextToken()).reverse().toString());
 
         System.out.println(fst > sec ? fst : sec);
     }
