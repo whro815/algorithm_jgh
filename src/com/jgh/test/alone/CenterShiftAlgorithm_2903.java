@@ -10,10 +10,11 @@ public class CenterShiftAlgorithm_2903 {
 
         int N = Integer.parseInt(br.readLine());      // 예) 점 1 => 2 + 1 = 3, 3 * 3 = 9
 
-        int dot = (int)Math.pow(2, N) + 1;  // 거듭제곱근 pow(대상숫자, 지수)
+        int dot = (int)Math.pow(2, N) + 1;  //  pow(대상숫자, 지수) 계차수열
 
         System.out.println(dot * dot);
 
         br.close();
+
     }
 }

@@ -3,7 +3,6 @@ package com.jgh.test.alone.stringEx;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class numOfWords_1152 {
@@ -15,6 +14,5 @@ public class numOfWords_1152 {
         br.close();
 
         System.out.println(st.countTokens());
-
     }
 }

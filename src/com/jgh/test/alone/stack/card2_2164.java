@@ -13,12 +13,12 @@ public class card2_2164 {
         int n = in.nextInt();
 
         for(int i = 1; i <= n; i++){
-            q.offer(i);
+            q.offer(i);     // 값 추가
         }
 
         while(q.size() > 1){
-            q.poll();
-            q.offer(q.poll());
+            q.poll();           // 값 빼기
+            q.offer(q.poll());  // Queue에 첫번째 값을 반환하고 제거 비어있다면 null
         }
         System.out.println(q.poll());
     }
