@@ -1,26 +1,32 @@
 package com.jgh.test.alone.stringEx;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class saltBomb_13223 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args)throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         // 현재 시간
-        String currentTime = sc.next();
+        String []currentTime = br.readLine().split(":");
 
         // 현재 시, 분, 초
-        int currentHour    = (currentTime.charAt(0) - '0') * 10 + currentTime.charAt(1) - '0';
-        int currentMinute  = (currentTime.charAt(3) - '0') * 10 + currentTime.charAt(4) - '0';
-        int currentSeconds = (currentTime.charAt(6) - '0') * 10 + currentTime.charAt(7) - '0';
+        int currentHour    = Integer.parseInt(currentTime[0]);
+        int currentMinute  = Integer.parseInt(currentTime[1]);
+        int currentSeconds = Integer.parseInt(currentTime[2]);
 
         // 투하 시간
-        String dropTime = sc.next();
+        String []dropTime = br.readLine().split(":");
 
-        // 투하 시, 분, 초 (각 단위의 인덱스에서10의 자리와 1의 자리를 구해 계산)
-        int dropHour    = (dropTime.charAt(0) - '0') * 10 + dropTime.charAt(1) - '0';
-        int dropMinute  = (dropTime.charAt(3) - '0') * 10 + dropTime.charAt(4) - '0';
-        int dropSeconds = (dropTime.charAt(6) - '0') * 10 + dropTime.charAt(7) - '0';
+        br.close();
+
+        // 투하 시, 분, 초
+        int dropHour    = Integer.parseInt(dropTime[0]);
+        int dropMinute  = Integer.parseInt(dropTime[1]);
+        int dropSeconds = Integer.parseInt(dropTime[2]);
 
         // 현재 시분초를 시 -> 초, 분 -> 초 , 초 변환후 전부 더하기
         int currentHmsTotal = currentHour * 3600 + currentMinute * 60 + currentSeconds;
