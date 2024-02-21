@@ -9,21 +9,21 @@ public class saltBomb_13223 {
         // 현재 시간
         String currentTime = sc.next();
 
+        // 현재 시, 분, 초
+        int currentHour    = (currentTime.charAt(0) - '0') * 10 + currentTime.charAt(1) - '0';
+        int currentMinute  = (currentTime.charAt(3) - '0') * 10 + currentTime.charAt(4) - '0';
+        int currentSeconds = (currentTime.charAt(6) - '0') * 10 + currentTime.charAt(7) - '0';
+
         // 투하 시간
         String dropTime = sc.next();
 
-        // 현재 시, 분, 초
-        int currentHour = Integer.parseInt(currentTime.substring(0,2));
-        int currentMinute = Integer.parseInt(currentTime.substring(3,5));
-        int currentSeconds = Integer.parseInt(currentTime.substring(6,8));
+        // 투하 시, 분, 초 (각 단위의 인덱스에서10의 자리와 1의 자리를 구해 계산)
+        int dropHour    = (dropTime.charAt(0) - '0') * 10 + dropTime.charAt(1) - '0';
+        int dropMinute  = (dropTime.charAt(3) - '0') * 10 + dropTime.charAt(4) - '0';
+        int dropSeconds = (dropTime.charAt(6) - '0') * 10 + dropTime.charAt(7) - '0';
 
         // 현재 시분초를 시 -> 초, 분 -> 초 , 초 변환후 전부 더하기
         int currentHmsTotal = currentHour * 3600 + currentMinute * 60 + currentSeconds;
-
-        // 투하 시, 분, 초
-        int dropHour = Integer.parseInt(dropTime.substring(0,2));
-        int dropMinute = Integer.parseInt(dropTime.substring(3,5));
-        int dropSeconds = Integer.parseInt(dropTime.substring(6,8));
 
         // 투하 시분초를 시 -> 초, 분 -> 초 , 초 변환후 전부 더하기
         int dropHmsTotal = dropHour * 3600 + dropMinute * 60 + dropSeconds;
@@ -40,6 +40,6 @@ public class saltBomb_13223 {
         int necessaryMinute = (necessaryHmsTotal % 3600) / 60;
         int necessarySeconds = necessaryHmsTotal % 60;
 
-        System.out.printf("%02d:%02d:%02d",necessaryHour, necessaryMinute, necessarySeconds);
+        System.out.printf("%02d:%02d:%02d", necessaryHour, necessaryMinute, necessarySeconds);
     }
 }
