@@ -1,12 +1,14 @@
 package com.jgh.test.alone.deepening;
 
-import java.util.Scanner;
+import java.io.*;
 
 public class Croatia_2941 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
 
-        String s = sc.nextLine();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        String s = br.readLine();
 
         int cnt = 0;
 
@@ -62,7 +64,8 @@ public class Croatia_2941 {
 
             cnt++;
         }
-
-        System.out.print(cnt);
+        br.close();
+        bw.write(String.valueOf(cnt));
+        bw.close();
     }
 }
