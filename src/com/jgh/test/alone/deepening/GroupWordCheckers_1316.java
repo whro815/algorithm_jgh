@@ -1,14 +1,16 @@
 package com.jgh.test.alone.deepening;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class GroupWordCheckers_1316 {
 
-    static Scanner sc = new Scanner(System.in);
+    static BufferedReader sc = new BufferedReader(new InputStreamReader(System.in));
 
-    static boolean chkTrueFalse(){
+    static boolean chkTrueFalse() throws IOException {
 
-        String str = sc.next();
+        String str = sc.readLine();
 
         boolean[] check = new boolean[26];
 
@@ -32,9 +34,9 @@ public class GroupWordCheckers_1316 {
         return true;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        int n = sc.nextInt();
+        int n = Integer.parseInt(sc.readLine());
         int cnt = 0;
 
         for (int i = 0; i < n; i++) {
