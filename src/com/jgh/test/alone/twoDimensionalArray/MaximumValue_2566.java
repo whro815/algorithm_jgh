@@ -1,11 +1,16 @@
 package com.jgh.test.alone.twoDimensionalArray;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class MaximumValue_2566 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        StringTokenizer st;
 
         int arr[][] = new int[9][9];
 
@@ -14,8 +19,9 @@ public class MaximumValue_2566 {
         int cl = 1;         // 열
 
         for (int i = 0; i < 9; i++) {     // 0 ~ 8
+            st=new StringTokenizer(br.readLine());
             for (int j = 0; j < 9; j++) { // 0 ~ 8
-                arr[i][j] = sc.nextInt();
+                arr[i][j] = Integer.parseInt(st.nextToken());
             }
         }
 
