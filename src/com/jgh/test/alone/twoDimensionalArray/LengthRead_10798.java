@@ -1,18 +1,20 @@
 package com.jgh.test.alone.twoDimensionalArray;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class LengthRead_10798 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         // 2차원 배열 생성
         char[][] charArray = new char[5][15];
 
-        for (int i = 0; i < 5; i++) {   // 5 고정
-            String str = sc.next();
-            for (int j = 0; j < str.length(); j++) { // 내가 입력한 문자열 길이
+        for (int i = 0; i < 5; i++) {
+            String str = br.readLine();
+            for (int j = 0; j < str.length(); j++) {
                 charArray[i][j] = str.charAt(j);
             }
         }
