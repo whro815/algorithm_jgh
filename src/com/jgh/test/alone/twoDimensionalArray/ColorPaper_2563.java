@@ -1,18 +1,22 @@
 package com.jgh.test.alone.twoDimensionalArray;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class ColorPaper_2563 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int[][] paper = new int[100][100]; // 종이 표시 배열
 
-        int n = scanner.nextInt(); // 색종이의 갯수 예) 3개
+        int n = Integer.parseInt(br.readLine()); // 색종이의 개수
 
         // 각 색종이의 위치를 입력받아 배열에 표시
         for (int i = 0; i < n; i++) {
-            int x = scanner.nextInt();
-            int y = scanner.nextInt();
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int x = Integer.parseInt(st.nextToken());
+            int y = Integer.parseInt(st.nextToken());
             markPaper(paper, x, y);
         }
 
