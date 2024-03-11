@@ -1,20 +1,27 @@
 package com.jgh.test.alone.sort;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Scanner;
+import java.util.StringTokenizer;
+
 
 public class CutLine_25305 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int n = sc.nextInt();
-        int k = sc.nextInt();
+        StringTokenizer st= new StringTokenizer(br.readLine());
+
+        int n = Integer.parseInt(st.nextToken());
+        int k = Integer.parseInt(st.nextToken());
 
         Integer arr[] = new Integer[n];
 
+        st = new StringTokenizer(br.readLine());
+
         for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
+            arr[i] = Integer.parseInt(st.nextToken());
         }
 
         // 내림차순
