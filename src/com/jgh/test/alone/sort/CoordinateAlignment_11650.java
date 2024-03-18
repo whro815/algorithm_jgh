@@ -14,8 +14,7 @@ public class CoordinateAlignment_11650 {
 
         StringTokenizer st;
 
-        int arr1[] = new int[n];
-        int arr2[] = new int[n];
+        int[][] coordinates = new int[n][2];
 
         for (int i = 0; i < n; i++) {
           st = new StringTokenizer(br.readLine());
@@ -23,15 +22,20 @@ public class CoordinateAlignment_11650 {
           int f = Integer.parseInt(st.nextToken());
           int d = Integer.parseInt(st.nextToken());
 
-          arr1[i] = f;
-          arr2[i] = d;
+          coordinates[i][0] = f;
+          coordinates[i][1] = d;
         }
 
-        Arrays.sort(arr1);
-        Arrays.sort(arr2);
+        Arrays.sort(coordinates,(f, d) ->{
+            if(f[0] == d[0]){
+                return Integer.compare(f[1],d[1]);
+            }
+            return Integer.compare(f[0], d[0]);
+        });
+
 
         for (int i = 0; i < n; i++) {
-            System.out.println(arr1[i]+" "+arr2[i]);
+            System.out.println(coordinates[i][0]+" "+coordinates[i][1]);
         }
 
     }
